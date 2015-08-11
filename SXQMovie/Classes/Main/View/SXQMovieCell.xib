@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SXQMovieCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="200"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-kL-Nep">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="148"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="148" id="zEL-dL-Vxv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-5s-udM">
+                        <rect key="frame" x="0.0" y="148" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="dpd-5C-zg7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YD-Tf-qn5" customClass="SXQRatingView">
+                        <rect key="frame" x="0.0" y="169" width="100" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="fuc-h1-Ou4"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watchlist_const" translatesAutoresizingMaskIntoConstraints="NO" id="oV8-Rh-e0H">
+                        <rect key="frame" x="0.0" y="0.0" width="30" height="38"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="7WG-z5-BiT"/>
+                            <constraint firstAttribute="width" constant="30" id="GIL-LN-wre"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Aba-5s-udM" secondAttribute="trailing" id="AKW-Jq-3PJ"/>
+                <constraint firstItem="0YD-Tf-qn5" firstAttribute="top" secondItem="Aba-5s-udM" secondAttribute="bottom" id="BhM-to-6HO"/>
+                <constraint firstItem="oV8-Rh-e0H" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JiW-FK-3qx"/>
+                <constraint firstAttribute="trailing" secondItem="tfg-kL-Nep" secondAttribute="trailing" id="MRI-kk-UIx"/>
+                <constraint firstItem="tfg-kL-Nep" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pe6-hv-604"/>
+                <constraint firstItem="0YD-Tf-qn5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QnI-Pt-yYY"/>
+                <constraint firstItem="Aba-5s-udM" firstAttribute="top" secondItem="tfg-kL-Nep" secondAttribute="bottom" id="R2n-RA-JWn"/>
+                <constraint firstItem="Aba-5s-udM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SbJ-5u-vXC"/>
+                <constraint firstItem="oV8-Rh-e0H" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hiY-Oj-kdY"/>
+                <constraint firstAttribute="trailing" secondItem="0YD-Tf-qn5" secondAttribute="trailing" id="kfg-Fg-VVR"/>
+                <constraint firstItem="tfg-kL-Nep" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wBZ-ck-NAh"/>
+            </constraints>
+            <size key="customSize" width="235" height="311"/>
+            <connections>
+                <outlet property="movieIconView" destination="tfg-kL-Nep" id="Fvq-mf-bkH"/>
+                <outlet property="movieTitle" destination="Aba-5s-udM" id="AmI-14-saN"/>
+                <outlet property="ratingView" destination="0YD-Tf-qn5" id="2Ei-7N-Yna"/>
+            </connections>
+            <point key="canvasLocation" x="342" y="58"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="watchlist_const" width="30" height="38"/>
+    </resources>
+</document>
