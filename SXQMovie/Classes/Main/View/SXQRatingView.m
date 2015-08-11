@@ -35,7 +35,7 @@ static const CGFloat starHeight = 24/2;
         UILabel *starLabel = [[UILabel alloc] init];
         starLabel.font = [UIFont systemFontOfSize:11];
         starLabel.textColor = [UIColor redColor];
-        starLabel.textAlignment = NSTextAlignmentRight;
+        starLabel.textAlignment = NSTextAlignmentCenter;
         starLabel.backgroundColor = [UIColor clearColor];
         [self addSubview:starLabel];
         self.starLabel = starLabel;
@@ -66,6 +66,11 @@ static const CGFloat starHeight = 24/2;
         }
         
     }];
-    self.starLabel.text = movie.rating.average;
+    NSMutableString *title = [NSMutableString string];
+    title = [movie.rating.average mutableCopy];
+    if (movie.rating.average.length > 3) {
+        [title deleteCharactersInRange:NSMakeRange(2, title.length - 3)];
+    }
+    self.starLabel.text = [title copy];
 }
 @end
